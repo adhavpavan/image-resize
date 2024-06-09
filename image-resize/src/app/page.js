@@ -1,8 +1,10 @@
 'use client';
 import Image from 'next/image';
 // import { Rnd } from 'react-rnd';
+import React, { useState, useRef } from 'react';
 import styles from './page.module.css';
 import Test from './Test';
+import Test2 from './Test2';
 // import { useState } from 'react';
 
 
@@ -15,7 +17,7 @@ export default function Home() {
   // });
   return (
     <main className={styles.main}>
-      <div
+      {/* <div
         className='box'
         style={{
           height: '600px',
@@ -26,10 +28,11 @@ export default function Home() {
           overflow: 'hidden',
           padding: '0',
         }}
-      >
+      > */}
 
-      <Test/>
-      </div>
+      {/* <Test/> */}
+      <Test2/>
+      {/* </div> */}
 
    
     </main>

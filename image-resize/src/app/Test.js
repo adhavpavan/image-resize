@@ -18,10 +18,12 @@ function Test() {
     x: 150,
     y: 150,
   });
+  const [position, setPosition] = useState({ x: 0, y: 0 });
   return (
     <div>
       <Rnd
-        style={style}
+        // style={style}
+        // position={{ x: position.x, y: position.y }}
         size={{
           width: initialDimention.width,
           height: initialDimention.height,
@@ -31,12 +33,18 @@ function Test() {
           setInitialDimention({ x: d.x, y: d.y });
         }}
         onResizeStop={(e, direction, ref, delta, position) => {
+          setPosition(position);
           setInitialDimention({
             width: ref.style.width,
             height: ref.style.height,
             ...position,
           });
         }}
+        minWidth={100}
+        minHeight={100}
+        maxWidth={600}
+        maxHeight={600}
+        style={{ border: '1px solid black', background: 'lightblue', boxSizing: 'border-box' }}
       >
         <div>
           <img
