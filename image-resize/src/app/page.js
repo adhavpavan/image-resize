@@ -1,10 +1,13 @@
 'use client';
 import Image from 'next/image';
+// import 'antd/dist/antd.css';
 // import { Rnd } from 'react-rnd';
 import React, { useState, useRef } from 'react';
 import styles from './page.module.css';
 import Test from './Test';
 import Test2 from './Test2';
+import Test4 from './Test4';
+import Test3 from './Test3';
 // import { useState } from 'react';
 
 
@@ -31,7 +34,9 @@ export default function Home() {
       > */}
 
       {/* <Test/> */}
-      <Test2/>
+      {/* <Test2/> */}
+      <Test4/>
+      <Test3/>
       {/* </div> */}
 
    
